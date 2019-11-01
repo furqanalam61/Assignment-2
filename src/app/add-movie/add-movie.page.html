@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot = "start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Add Movie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class = "ion-padding-top">
+    <ion-text>Please enter movie name</ion-text>
+
+     <div [formGroup] = "addForm">
+      <ion-item>
+        <ion-label position = "floating">Movie Name</ion-label>
+        <ion-input type = "text" formControlName = "name"></ion-input>
+      </ion-item>
+
+      <ion-grid class = "ion-padding-top">
+        <ion-row class = "ion-justify-content-center">
+          <ion-button shape = "rectangle" [disabled] = "!addForm.valid" (click) = "saveMovie()">Save</ion-button>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-grid>
+
+</ion-content>

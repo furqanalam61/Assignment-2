@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot = "start">
+          <ion-back-button defaultHref = "movieslist"></ion-back-button>
+        </ion-buttons>
+
+    <ion-title>Movie</ion-title>
+    <ion-button slot="end" (click) = deleteMovie()>
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-card>
+      <img src="https://img.icons8.com/pastel-glyph/64/000000/movie-beginning.png" height="300px" />
+        <ion-card-header>
+          <ion-card-title>Name: {{singleMovie?.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          ID: {{singleMovie?.id}}
+          <br> Features:
+        </ion-card-content>
+      </ion-card>
+</ion-content>

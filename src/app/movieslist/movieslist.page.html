@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot = "start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Movies List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor = "let item of movies">
+    <ion-item (click) = "changeUrl(item)">
+      <ion-card-content>
+        <ion-label>{{item?.name}} | {{item?.id}}</ion-label>
+      </ion-card-content>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
